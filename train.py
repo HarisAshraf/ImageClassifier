@@ -114,7 +114,7 @@ def train_model(trainloader, validloader, testloader):
    if args.arch=='densenet121':
       model = models.densenet121(pretrained=True)
       input_length = 1024
-   elif arch == 'alexnet':
+   elif args.arch == 'alexnet':
       model = models.alexnet(pretrained=True)
       input_length = 9216
    else: 
@@ -144,7 +144,7 @@ def train_model(trainloader, validloader, testloader):
    optimizer = optim.Adam(model.classifier.parameters(), lr=learning_rate)
    model.to(device)
 
-   epochs = 1
+   epochs = 2
    steps = 0
    running_loss = 0
    print_every = 10
