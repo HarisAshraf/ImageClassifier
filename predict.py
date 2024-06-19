@@ -16,8 +16,8 @@ parser = argparse.ArgumentParser(
     description = 'Parser for predict function'
 )
 
-parser.add_argument('image_path', action = 'store', default='flowers/test/5/image_05159.jpg')
-parser.add_argument('checkpoint', action = 'store', default='checkpoint.pth')
+parser.add_argument('image_path', action = 'store')
+parser.add_argument('checkpoint', action = 'store')
 parser.add_argument('--category_names', action = 'store', default='cat_to_name.json')
 parser.add_argument('--top_k', action = 'store', default=5)
 parser.add_argument('--gpu', action = 'store', default='gpu')
